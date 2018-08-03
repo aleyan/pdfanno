@@ -19,3 +19,5 @@ server/extlib/*.jar
 
 # Server dependencies.
 server/pdfextract.jar
+
+docs/latest
