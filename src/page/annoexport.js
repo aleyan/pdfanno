@@ -103,9 +103,10 @@ function getDownloadFileName () {
  */
 async function uploadAnnotation (anno) {
   const params = parseUrlQuery()
-  const url = params['callback_url']
+  const url = decodeURIComponent(params['callback'])
   const response = await fetch(url, {
-    method : 'PUT',
+    method : 'POST',
+    mode   : 'no-cors',
     body   : JSON.stringify({
       // api_root : apiRoot,
       // token    : userToken,
@@ -113,11 +114,13 @@ async function uploadAnnotation (anno) {
     }),
     headers : new Headers({ 'Content-type' : 'application/json' })
   })
-  console.log('response:', response)
+  // console.log('response:', response)
+ /*
   const body = await response.json()
   console.log(response.status, body)
   if (response.status !== 200) {
     return body.message
   }
+  */
   return null
 }
