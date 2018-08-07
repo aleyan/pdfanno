@@ -222,7 +222,8 @@ export default class SpanAnnotation extends AbstractAnnotation {
       page      : this.page,
       label     : this.text || '',
       text,
-      textrange : this.textRange
+      textrange : this.textRange,
+      rectangles: this.rectangles
     }
   }
 
