@@ -109,6 +109,18 @@ export default class RectAnnotation extends AbstractAnnotation {
     }
   }
 
+  export (id) {
+
+    return {
+      id        : id + '',
+      page      : this.page,
+      label     : this.text || '',
+      area: {
+        left: this.x, top: this.y, width: this.width, height: this.height
+      }
+    }
+  }
+
   /**
    * Delete the annotation if selected.
    */

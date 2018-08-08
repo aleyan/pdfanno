@@ -171,6 +171,13 @@ export default class AnnotationContainer {
             dataExport['relations'] = []
           }
           dataExport['relations'].push(annotation.export())
+
+        } else if (annotation.type === 'rect') {
+          if (!dataExport['rects']) {
+            dataExport['rects'] = []
+          }
+          dataExport['rects'].push(annotation.export(id))
+          annotation.exportId = id
         }
       })
 
