@@ -291,6 +291,7 @@ function setupUI () {
     },
     createSpanAnnotation : window.annoPage.createSpan,
     createRelAnnotation  : window.annoPage.createRelation,
+    createRectAnnotation : window.annoPage.createRect,
     colorChangeListener  : v => {
       window.iframeWindow.annotationContainer.changeColor(v)
     }
