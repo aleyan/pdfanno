@@ -76,7 +76,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "anno-ui": "github:paperai/anno-ui#master",
+    "anno-ui": "github:aleyan/anno-ui#ay-rect",
     "axios": "^0.15.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
