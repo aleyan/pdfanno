@@ -23,7 +23,7 @@ import * as constants from './shared/constants'
  * API root point.
  */
 if (process.env.NODE_ENV === 'production') {
-  window.API_DOMAIN = 'https://pdfanno.hshindo.com'
+  window.API_DOMAIN = 'http://localhost'
   window.API_PATH = '/' + process.env.SERVER_PATH + '/'
   window.API_ROOT = window.API_DOMAIN + window.API_PATH
 } else {
