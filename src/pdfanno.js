@@ -26,15 +26,20 @@ if (process.env.NODE_ENV === 'production') {
   window.API_DOMAIN = 'http://localhost'
   window.API_PATH = '/' + process.env.SERVER_PATH + '/'
   window.API_ROOT = window.API_DOMAIN + window.API_PATH
-} else  { //(process.env.NODE_ENV === 'docker')
+} else if (process.env.NODE_ENV === 'docker') {
   window.API_DOMAIN = 'http://localhost'
-  window.API_PATH = '/' + process.env.SERVER_PATH + '/'
+  window.API_PATH = '/pdfannoserver/'
   window.API_ROOT = window.API_PATH
-} /*else {
-  window.API_DOMAIN = 'http://localhost:3000'
-  window.API_PATH = '/'
-  window.API_ROOT = window.API_DOMAIN + window.API_PATH
-}*/
+} else {
+  /**
+   * window.API_DOMAIN = 'http://localhost:3000'
+   * window.API_PATH = process.env.BUILD_TARGET
+   * window.API_ROOT = window.API_DOMAIN + window.API_PATH
+   */
+  window.API_DOMAIN = 'http://localhost'
+  window.API_PATH = '/pdfannoserver/'
+  window.API_ROOT = window.API_PATH
+}
 
 /**
  * Global variable.
