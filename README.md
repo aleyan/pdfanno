@@ -33,7 +33,8 @@ SERVER_PORT=1000
 
 ### Run Server
 ```
-npm run server
+npm run server:dev
+npm run front:dev
 ```
 
 ## Usage
